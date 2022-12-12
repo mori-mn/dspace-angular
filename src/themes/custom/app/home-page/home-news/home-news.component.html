@@ -1,0 +1,26 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <div class="background-image">
+            <div class="container">
+                <div class="jumbotron jumbotron-fluid">
+                    <ds-themed-text-section *ngIf="hasHomeNewsMetadata; else dsDefaultHomeNews" [sectionId]="'site'" [textRowSection]="homeNewsSection" [site]="(site$ | async)"></ds-themed-text-section>
+                </div>
+            </div>
+            <small class="credits">Photo by
+        <a href="https://www.pexels.com/@inspiredimages">@inspiredimages</a>
+      </small>
+        </div>
+    </div>
+</div>
+
+<ng-template #dsDefaultHomeNews>
+    <div class="d-flex flex-wrap">
+        <div>
+            <h1 class="display-3">Mongolian Research Infrastructure CUSTOM THEME!</h1>
+            <p class="lead">This infrastructure covers scholarly activities of Mongolian researchers. </p>
+        </div>
+    </div>
+    <!-- <p>Join an international community of
+        <a href="https://wiki.lyrasis.org/display/DSPACE/DSpace+Positioning" target="_blank">leading institutions using DSpace</a>.
+    </p> -->
+</ng-template>
