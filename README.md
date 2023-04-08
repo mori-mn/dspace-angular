@@ -522,3 +522,20 @@ The full license is available in the [LICENSE](LICENSE) file or online at http:/
 
 DSpace uses third-party libraries which may be distributed under different licenses. Those licenses are listed
 in the [LICENSES_THIRD_PARTY](LICENSES_THIRD_PARTY) file.
+
+
+## UI changes apply on mori.ac.mn
+```
+cd /home/mori/dspace-angular
+yarn install
+yarn build:prod
+sudo cp -r dist /opt/dspace-ui/
+sudo su dspace
+cd /opt/dspace-ui
+vim pm2.json
+pm2 delete pm2.json
+pm2 start pm2.json
+pm2 list
+pm2 logs
+exit
+```
